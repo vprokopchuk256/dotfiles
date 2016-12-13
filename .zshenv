@@ -1,8 +1,3 @@
-echoRun() {
-  echo "$1"
-  eval $1
-}
-
 setopt rcquotes
 
 alias e='vim .'
@@ -23,18 +18,12 @@ alias tj='tar -xvjpf '
 alias t='tar xvfz '
 alias tz='tar -xvzpf '
 alias tb='tar -xvfj '
-
 alias go='gco'
 alias glop='git log --pretty=format:''%Cred%H%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'' --abbrev-commit'
 alias glt='glop --since=am'
 alias gly='glop --since=''1 day ago'''
 alias gh='glop -20'
 alias grb='git rebase '
-
-mtc() {
-  echoRun "m task complete '$@'"
-}
-
 alias b="bundle"
 alias bi="b install --path vendor"
 alias bil="bi --local"
@@ -46,13 +35,7 @@ alias bes='be rspec '
 alias bec='be rails c '
 alias bed='be rails db '
 
-alias note='vim -c Geeknote'
-
-alias h='cat .env'
-
 export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
-
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home"
 export JAVA=$JAVA_HOME
 export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cacert.pem
